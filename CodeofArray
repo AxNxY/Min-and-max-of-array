@@ -1,0 +1,25 @@
+#include <iostream> 
+#include <climits> 
+using namespace std;
+int main() 
+{
+  const int n = 5;
+  int arr[n] = {3, 5, 2, 7, 22};
+
+  int min = INT_MAX; // initialize ‘min’ to the maximum value int max = INT_MIN; // initialize ‘max’ to the minimum value
+  // iterate on the array
+  
+  for(int i=0; i<n; i++) 
+  {
+      if (arr[i] < min) 
+        min = arr[i];
+      if (arr[i] > max) 
+         max = arr[i];
+
+    // if the i-th element of arr is smaller than ‘min’, update ‘min’ // if the i-th element of arr is greater than ‘max, update ‘max’
+  }
+  
+  cout << "Min: " << min << endl;
+  cout << "Max: " << max << endl; 
+  return 0;
+}
